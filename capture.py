@@ -32,7 +32,7 @@ while True:
             x, y, w, h = cv2.boundingRect(cnt)
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
             if not captured:
-                cv2.imwrite("laser_detected.jpg", frame)
+                cv2.imwrite("/home/duypc/laser_detected.jpg", frame)
                 captured = True
                 print("Laser dot detected and image captured.")
 
@@ -43,3 +43,4 @@ while True:
 # Release camera
 cap.release()
 cv2.destroyAllWindows()
+
